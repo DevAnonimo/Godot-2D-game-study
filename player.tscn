@@ -45,4 +45,4 @@ shape = SubResource("RectangleShape2D_3pdh1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_bxj64")
-animation = &"walking"
+animation = &"up"
