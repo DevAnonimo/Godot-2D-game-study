@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://btmancrhhu2sh"]
+
+[ext_resource type="Texture2D" uid="uid://dibdntmtwlruk" path="res://art/Enemy/enemyFlyingAlt_1.png" id="1_eilcy"]
+[ext_resource type="Texture2D" uid="uid://dbipiej4wor02" path="res://art/Enemy/enemyFlyingAlt_2.png" id="2_vjesn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3pus"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eilcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vjesn")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o3pus")
+animation = &"walking"
