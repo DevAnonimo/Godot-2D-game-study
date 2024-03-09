@@ -12,10 +12,11 @@ point_count = 5
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jl7ia")
-enemy_scene = ExtResource("2_h0jm8")
 
 [node name="Player" parent="." instance=ExtResource("1_q8pq4")]
 position = Vector2(246, 286)
+
+[node name="Enemy" parent="." instance=ExtResource("2_h0jm8")]
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_oad8y")

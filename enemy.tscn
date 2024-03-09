@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://btmancrhhu2sh"]
+[gd_scene load_steps=6 format=3 uid="uid://btmancrhhu2sh"]
 
 [ext_resource type="Texture2D" uid="uid://dibdntmtwlruk" path="res://art/Enemy/enemyFlyingAlt_1.png" id="1_eilcy"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_isqpj"]
 [ext_resource type="Texture2D" uid="uid://dbipiej4wor02" path="res://art/Enemy/enemyFlyingAlt_2.png" id="2_vjesn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o3pus"]
@@ -17,8 +18,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Enemy" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1wt6"]
+radius = 48.0
+height = 126.0
+
+[node name="Enemy" type="RigidBody2D"]
+position = Vector2(256, 298)
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_isqpj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o3pus")
 animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 0
+position = Vector2(-6, 0)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_a1wt6")

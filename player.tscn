@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://67ekiol1ilhd" path="res://art/Player/playerGrey_walk2.png" id="2_gusi5"]
 [ext_resource type="Texture2D" uid="uid://d0hkujvew2s2x" path="res://art/Player/playerGrey_up2.png" id="2_tw6tw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pdh1"]
-size = Vector2(88, 98)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jlvts"]
+radius = 53.0
+height = 120.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bxj64"]
 animations = [{
@@ -40,8 +41,8 @@ animations = [{
 script = ExtResource("1_iaid0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_3pdh1")
+position = Vector2(-1, -7)
+shape = SubResource("CapsuleShape2D_jlvts")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_bxj64")
